@@ -78,6 +78,10 @@ int main()
                     menadzer.zmianaHaslaZalogowanegoUzytkownika(uzytkownicy);
                     break;
                 }
+            case '8':
+                {
+                    menadzer.ustawIdZalogowanegoUzytkownika(0);
+                }
 
             }
 
@@ -89,3 +93,4 @@ int main()
     return 0;
 
 }
+
