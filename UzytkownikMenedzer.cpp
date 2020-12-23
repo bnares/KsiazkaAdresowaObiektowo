@@ -98,7 +98,6 @@ void UzytkownikMenadzer:: rejestracjaUzytkownika()
     PlikiZUzytkownikami pliki;
 
     uzytkownicy.push_back(uzytkownik);
-    cout<<"Dodane uzytkownik - rejestracja uzytkownika: \n"<<uzytkownicy.back().pobierzID()<<" "<<uzytkownicy.back().pobierzLogin()<<" "<<uzytkownik.pobierzHaslo()<<endl;
     pliki.dopiszUzytkownikaDoPliku(uzytkownik);
 
     cout << endl << "Konto zalozono pomyslnie" << endl << endl;
@@ -113,7 +112,6 @@ Uzytkownik UzytkownikMenadzer:: podajDaneNowegoUzytkownika()
     MetodyPomocznicze pomoc;
 
     uzytkownik.ustawID(pobierzIdNowegoUzytkownika());
-    cout<<"Dodane id do pliku bedzie wynosic: "<<uzytkownik.pobierzID()<<endl;
 
     do
     {
@@ -136,7 +134,6 @@ int UzytkownikMenadzer:: pobierzIdNowegoUzytkownika()
     if (uzytkownicy.empty() == true)
         return 1;
     else
-        cout<<"Ostatnie id wynosi: "<<uzytkownicy.back().pobierzID()<<endl;
         return uzytkownicy.back().pobierzID() + 1;
 }
 
@@ -201,3 +198,4 @@ int UzytkownikMenadzer:: pobierzIdZalogowanegoUzytkownika()
 {
     return idZalogowanegoUzytkownika;
 }
+
